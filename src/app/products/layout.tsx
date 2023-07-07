@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./layout.module.css";
 
 export const metadata = {
@@ -13,8 +14,8 @@ export default function ProductsLayout({
   return (
     <>
       <nav className={styles["nav"]}>
-        <a href="">여성 옷</a>
-        <a href="">남성 옷</a>
+        <Link href="/products/woman">여성 옷</Link>
+        <Link href="/products/man">남성 옷</Link>
       </nav>
       <section className={styles["product"]}>{children}</section>
     </>
