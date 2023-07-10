@@ -1,6 +1,14 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Counter from "@/components/Counter";
+import os from "os"; // 노드 APIs
 
 export default function Home() {
-  return <h1>홈페이지다!!</h1>;
+  console.log("안뇽");
+  console.log(os.hostname());
+
+  return (
+    <>
+      <h1>홈페이지다!!</h1>
+      <Counter />
+    </>
+  );
 }
