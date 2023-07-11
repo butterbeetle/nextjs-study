@@ -1,5 +1,6 @@
 import NotFoundPage from "@/app/not-found";
 import { getProduct, getProducts } from "@/service/products";
+import Image from "next/image";
 
 export const revalidate = 3;
 
@@ -28,5 +29,15 @@ export default async function ProductsPage({ params: { slug } }: Props) {
   if (!product) {
     NotFoundPage();
   }
-  return <h1>{product?.name} 제품 설명 페이지</h1>;
+  return (
+    <>
+      <h1>{product?.name} 제품 설명 페이지</h1>
+      <Image
+        src={`/images/${product?.image}`}
+        alt={"aa"}
+        width={300}
+        height={300}
+      />
+    </>
+  );
 }
