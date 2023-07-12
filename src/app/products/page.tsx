@@ -11,7 +11,7 @@ export default async function ProductsPage() {
   return (
     <>
       <h1>제품 소개 페이지</h1>
-      <Image src={modelImage} alt="Model" />
+      <Image src={modelImage} alt="Model" width={300} height={300} />
       <ul>
         {products.map(({ id, name }, index) => (
           <li key={index}>
